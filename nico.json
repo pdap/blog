@@ -1,0 +1,25 @@
+{
+    "source": "content/",
+    "output": "_site",
+    "theme": "_themes/one",
+    "sitename": "pdoc",
+    "siteurl": "http://lab.lepture.com/nico/",
+    "permalink": "{{directory}}/{{filename}}.html",
+    "writers": [
+        "nico.PostWriter",
+        "nico.PageWriter",
+        "nico.FileWriter",
+        "nico.StaticWriter",
+        "nico.ArchiveWriter",
+        "nico.YearWriter",
+        "nico.TagWriter",
+        "nico.DirectoryWriter",
+        "nico.FeedWriter"
+    ],
+    "logo":"/static/img/logo2.png",
+    "hideNico":true,
+    "navigation": [
+        {"title": "生活", "link": "/life/index.html"},
+        {"title": "工作", "link": "/work/index.html"}
+    ] 
+}
