@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>pdoc</title>
+    <link href="http://lab.lepture.com/nico/feed.xml" rel="self" />
+    <link href="http://lab.lepture.com/nico/" />
+    <id>http://lab.lepture.com/nico/feed.xml</id>
+    <entry>
+        <title type="html"><![CDATA[layer]]></title>
+        <link href="http://lab.lepture.com/nico/layer.html"/>
+        <published>2016-01-22T04:01:00.000Z</published>
+        <updated>2016-01-22T04:01:00.000Z</updated>
+        <id>http://lab.lepture.com/nico/layer.html</id>
+        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+            <![CDATA[ <h2 id="引用">引用</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><button id='normal'>定位pop</button>点击空白处关闭
+<div id='content' style="display: none">
+  <table cellspacing="0" cellpadding="0" class="tablePopB tableItemC">
+    <tbody><tr>
+      <th>原密码：</th>
+      <td><input type="password" id="oldPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>新密码：</th>
+      <td><input type="password" id="newPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>确认新密码：</th>
+      <td><input type="password" id="confirmNewPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="tableBot"><input type="submit" class="bthBlueOper mgL10" value="修改">
+        <input type="reset" class="bthBlueOper mgL10" value="重置">
+        <span>新密码不能是123456</span></td>
+    </tr>
+  </tbody></table>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">id</span>=<span class="value">'normal'</span>&gt;</span>定位pop<span class="tag">&lt;/<span class="title">button</span>&gt;</span>点击空白处关闭
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">style</span>=<span class="value">"display: none"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">table</span> <span class="attribute">cellspacing</span>=<span class="value">"0"</span> <span class="attribute">cellpadding</span>=<span class="value">"0"</span> <span class="attribute">class</span>=<span class="value">"tablePopB tableItemC"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tbody</span>&gt;</span><span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>原密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"oldPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"newPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>确认新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"confirmNewPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span> <span class="attribute">colspan</span>=<span class="value">"2"</span> <span class="attribute">class</span>=<span class="value">"tableBot"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"修改"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"reset"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"重置"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span>&gt;</span>新密码不能是123456<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span><span class="tag">&lt;/<span class="title">table</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><hr>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[life]]></title>
+        <link href="http://lab.lepture.com/nico/life/life.html"/>
+        <published>2016-01-22T04:01:00.000Z</published>
+        <updated>2016-01-22T04:01:00.000Z</updated>
+        <id>http://lab.lepture.com/nico/life/life.html</id>
+        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+            <![CDATA[ <h2 id="引用">引用</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><button id='normal'>定位pop</button>点击空白处关闭
+<div id='content' style="display: none">
+  <table cellspacing="0" cellpadding="0" class="tablePopB tableItemC">
+    <tbody><tr>
+      <th>原密码：</th>
+      <td><input type="password" id="oldPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>新密码：</th>
+      <td><input type="password" id="newPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>确认新密码：</th>
+      <td><input type="password" id="confirmNewPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="tableBot"><input type="submit" class="bthBlueOper mgL10" value="修改">
+        <input type="reset" class="bthBlueOper mgL10" value="重置">
+        <span>新密码不能是123456</span></td>
+    </tr>
+  </tbody></table>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">id</span>=<span class="value">'normal'</span>&gt;</span>定位pop<span class="tag">&lt;/<span class="title">button</span>&gt;</span>点击空白处关闭
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">style</span>=<span class="value">"display: none"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">table</span> <span class="attribute">cellspacing</span>=<span class="value">"0"</span> <span class="attribute">cellpadding</span>=<span class="value">"0"</span> <span class="attribute">class</span>=<span class="value">"tablePopB tableItemC"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tbody</span>&gt;</span><span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>原密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"oldPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"newPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>确认新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"confirmNewPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span> <span class="attribute">colspan</span>=<span class="value">"2"</span> <span class="attribute">class</span>=<span class="value">"tableBot"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"修改"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"reset"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"重置"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span>&gt;</span>新密码不能是123456<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span><span class="tag">&lt;/<span class="title">table</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><hr>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[work]]></title>
+        <link href="http://lab.lepture.com/nico/work/work.html"/>
+        <published>2016-01-22T04:01:00.000Z</published>
+        <updated>2016-01-22T04:01:00.000Z</updated>
+        <id>http://lab.lepture.com/nico/work/work.html</id>
+        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+            <![CDATA[ <h2 id="引用">引用</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><button id='normal'>定位pop</button>点击空白处关闭
+<div id='content' style="display: none">
+  <table cellspacing="0" cellpadding="0" class="tablePopB tableItemC">
+    <tbody><tr>
+      <th>原密码：</th>
+      <td><input type="password" id="oldPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>新密码：</th>
+      <td><input type="password" id="newPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>确认新密码：</th>
+      <td><input type="password" id="confirmNewPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="tableBot"><input type="submit" class="bthBlueOper mgL10" value="修改">
+        <input type="reset" class="bthBlueOper mgL10" value="重置">
+        <span>新密码不能是123456</span></td>
+    </tr>
+  </tbody></table>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">id</span>=<span class="value">'normal'</span>&gt;</span>定位pop<span class="tag">&lt;/<span class="title">button</span>&gt;</span>点击空白处关闭
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">style</span>=<span class="value">"display: none"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">table</span> <span class="attribute">cellspacing</span>=<span class="value">"0"</span> <span class="attribute">cellpadding</span>=<span class="value">"0"</span> <span class="attribute">class</span>=<span class="value">"tablePopB tableItemC"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tbody</span>&gt;</span><span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>原密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"oldPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"newPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>确认新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"confirmNewPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span> <span class="attribute">colspan</span>=<span class="value">"2"</span> <span class="attribute">class</span>=<span class="value">"tableBot"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"修改"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"reset"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"重置"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span>&gt;</span>新密码不能是123456<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span><span class="tag">&lt;/<span class="title">table</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><hr>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[中国搜索]]></title>
+        <link href="http://lab.lepture.com/nico/hello-world.html"/>
+        <published>2012-12-12T04:00:00.000Z</published>
+        <updated>2012-12-12T04:00:00.000Z</updated>
+        <id>http://lab.lepture.com/nico/hello-world.html</id>
+        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+            <![CDATA[ <h2 id="测试">测试</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<div id="demo_id">
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"demo_id"</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><script>$("#demo_id").html('dojo');</script><div class="highlight"><pre><code class="javascript">$(<span class="string">"#demo_id"</span>).html(<span class="string">'dojo'</span>);</code></pre></div><hr>
+]]>
+        </content>
+    </entry>
+</feed>
