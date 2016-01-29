@@ -19,7 +19,7 @@
     "logo":"https://s.gravatar.com/avatar/de86b1e4c7a782dd49003e4d0cec92af?size=100&default=retro",
     "hideNico":true,
     "navigation": [
-        {"title": "生活", "link": "life/index.html"},
-        {"title": "工作", "link": "work/index.html"}
+        {"title": "分类一", "link": "life/index.html"},
+        {"title": "分类二", "link": "work/index.html"}
     ] 
 }
