@@ -6,10 +6,10 @@
     <id>http://pangzhihao.cn/_site/feed.xml</id>
     <entry>
         <title type="html"><![CDATA[layer]]></title>
-        <link href="http://pangzhihao.cn/_site/."/>
+        <link href="http://pangzhihao.cn/_site/"/>
         <published>2016-01-22T04:01:00.000Z</published>
         <updated>2016-01-22T04:01:00.000Z</updated>
-        <id>http://pangzhihao.cn/_site/.</id>
+        <id>http://pangzhihao.cn/_site/</id>
         <content type="html" xml:base="http://pangzhihao.cn/_site" xml:lang="en">
             <![CDATA[ <h2 id="引用">引用</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><button id='normal'>定位pop</button>点击空白处关闭
 <div id='content' style="display: none">
@@ -58,10 +58,10 @@
         </content>
     </entry><entry>
         <title type="html"><![CDATA[life]]></title>
-        <link href="http://pangzhihao.cn/_site/life/life"/>
+        <link href="http://pangzhihao.cn/_site/life/life.html"/>
         <published>2016-01-22T04:01:00.000Z</published>
         <updated>2016-01-22T04:01:00.000Z</updated>
-        <id>http://pangzhihao.cn/_site/life/life</id>
+        <id>http://pangzhihao.cn/_site/life/life.html</id>
         <content type="html" xml:base="http://pangzhihao.cn/_site" xml:lang="en">
             <![CDATA[ <h2 id="引用">引用</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><button id='normal'>定位pop</button>点击空白处关闭
 <div id='content' style="display: none">
@@ -110,10 +110,10 @@
         </content>
     </entry><entry>
         <title type="html"><![CDATA[work]]></title>
-        <link href="http://pangzhihao.cn/_site/work/work"/>
+        <link href="http://pangzhihao.cn/_site/work/work.html"/>
         <published>2016-01-22T04:01:00.000Z</published>
         <updated>2016-01-22T04:01:00.000Z</updated>
-        <id>http://pangzhihao.cn/_site/work/work</id>
+        <id>http://pangzhihao.cn/_site/work/work.html</id>
         <content type="html" xml:base="http://pangzhihao.cn/_site" xml:lang="en">
             <![CDATA[ <h2 id="引用">引用</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><button id='normal'>定位pop</button>点击空白处关闭
 <div id='content' style="display: none">

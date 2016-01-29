@@ -4,7 +4,7 @@
     "theme": "_themes/one",
     "sitename": "pdoc",
     "siteurl": "http://pangzhihao.cn/_site",
-    "permalink": "{{directory}}/{{filename}}",
+    "permalink": "{{directory}}/{{filename}}.html",
     "writers": [
         "nico.PostWriter",
         "nico.PageWriter",
