@@ -3,8 +3,8 @@
     "output": "_site",
     "theme": "_themes/one",
     "sitename": "pdoc",
-    "siteurl": "http://lab.lepture.com/nico/",
-    "permalink": "{{directory}}/{{filename}}.html",
+    "siteurl": "http://pangzhihao.cn/_site",
+    "permalink": "{{directory}}/{{filename}}",
     "writers": [
         "nico.PostWriter",
         "nico.PageWriter",
@@ -16,10 +16,10 @@
         "nico.DirectoryWriter",
         "nico.FeedWriter"
     ],
-    "logo":"/static/img/logo2.png",
+    "logo":"https://s.gravatar.com/avatar/de86b1e4c7a782dd49003e4d0cec92af?size=100&default=retro",
     "hideNico":true,
     "navigation": [
-        {"title": "生活", "link": "/life/index.html"},
-        {"title": "工作", "link": "/work/index.html"}
+        {"title": "生活", "link": "life/index.html"},
+        {"title": "工作", "link": "work/index.html"}
     ] 
 }
