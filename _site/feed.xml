@@ -58,10 +58,10 @@
         </content>
     </entry><entry>
         <title type="html"><![CDATA[文档化介绍]]></title>
-        <link href="http://pangzhihao.cn/_site/README.html"/>
+        <link href="http://pangzhihao.cn/_site/readme.html"/>
         <published>2016-01-22T04:01:00.000Z</published>
         <updated>2016-01-22T04:01:00.000Z</updated>
-        <id>http://pangzhihao.cn/_site/README.html</id>
+        <id>http://pangzhihao.cn/_site/readme.html</id>
         <content type="html" xml:base="http://pangzhihao.cn/_site" xml:lang="en">
             <![CDATA[ <h2 id="声明引用">声明引用</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="声明结构">声明结构</h2><div class="nico-insert-code"><div id='content' >
  测试div 
