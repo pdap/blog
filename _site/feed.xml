@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>pdoc</title>
-    <link href="http://lab.lepture.com/nico/feed.xml" rel="self" />
-    <link href="http://lab.lepture.com/nico/" />
-    <id>http://lab.lepture.com/nico/feed.xml</id>
+    <link href="http://pangzhihao.cn/_site/feed.xml" rel="self" />
+    <link href="http://pangzhihao.cn/_site" />
+    <id>http://pangzhihao.cn/_site/feed.xml</id>
     <entry>
         <title type="html"><![CDATA[layer]]></title>
-        <link href="http://lab.lepture.com/nico/layer.html"/>
+        <link href="http://pangzhihao.cn/_site/."/>
         <published>2016-01-22T04:01:00.000Z</published>
         <updated>2016-01-22T04:01:00.000Z</updated>
-        <id>http://lab.lepture.com/nico/layer.html</id>
-        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+        <id>http://pangzhihao.cn/_site/.</id>
+        <content type="html" xml:base="http://pangzhihao.cn/_site" xml:lang="en">
             <![CDATA[ <h2 id="引用">引用</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><button id='normal'>定位pop</button>点击空白处关闭
 <div id='content' style="display: none">
   <table cellspacing="0" cellpadding="0" class="tablePopB tableItemC">
@@ -58,11 +58,11 @@
         </content>
     </entry><entry>
         <title type="html"><![CDATA[life]]></title>
-        <link href="http://lab.lepture.com/nico/life/life.html"/>
+        <link href="http://pangzhihao.cn/_site/life/life"/>
         <published>2016-01-22T04:01:00.000Z</published>
         <updated>2016-01-22T04:01:00.000Z</updated>
-        <id>http://lab.lepture.com/nico/life/life.html</id>
-        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+        <id>http://pangzhihao.cn/_site/life/life</id>
+        <content type="html" xml:base="http://pangzhihao.cn/_site" xml:lang="en">
             <![CDATA[ <h2 id="引用">引用</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><button id='normal'>定位pop</button>点击空白处关闭
 <div id='content' style="display: none">
   <table cellspacing="0" cellpadding="0" class="tablePopB tableItemC">
@@ -110,11 +110,11 @@
         </content>
     </entry><entry>
         <title type="html"><![CDATA[work]]></title>
-        <link href="http://lab.lepture.com/nico/work/work.html"/>
+        <link href="http://pangzhihao.cn/_site/work/work"/>
         <published>2016-01-22T04:01:00.000Z</published>
         <updated>2016-01-22T04:01:00.000Z</updated>
-        <id>http://lab.lepture.com/nico/work/work.html</id>
-        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+        <id>http://pangzhihao.cn/_site/work/work</id>
+        <content type="html" xml:base="http://pangzhihao.cn/_site" xml:lang="en">
             <![CDATA[ <h2 id="引用">引用</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><button id='normal'>定位pop</button>点击空白处关闭
 <div id='content' style="display: none">
   <table cellspacing="0" cellpadding="0" class="tablePopB tableItemC">
@@ -158,20 +158,6 @@
     <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
   <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span><span class="tag">&lt;/<span class="title">table</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><hr>
-]]>
-        </content>
-    </entry><entry>
-        <title type="html"><![CDATA[中国搜索]]></title>
-        <link href="http://lab.lepture.com/nico/hello-world.html"/>
-        <published>2012-12-12T04:00:00.000Z</published>
-        <updated>2012-12-12T04:00:00.000Z</updated>
-        <id>http://lab.lepture.com/nico/hello-world.html</id>
-        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
-            <![CDATA[ <h2 id="测试">测试</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
-<div id="demo_id">
-</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"demo_id"</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><script>$("#demo_id").html('dojo');</script><div class="highlight"><pre><code class="javascript">$(<span class="string">"#demo_id"</span>).html(<span class="string">'dojo'</span>);</code></pre></div><hr>
 ]]>
         </content>
     </entry>
