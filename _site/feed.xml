@@ -107,7 +107,10 @@
   }
 }
   <span class="comment">// 样式切换</span>
- pcwapcss([<span class="string">'css/pc.css'</span>],[<span class="string">'css/wap.css'</span>]);</code></pre></div><hr>
+ pcwapcss([<span class="string">'css/pc.css'</span>],[<span class="string">'css/wap.css'</span>]);</code></pre></div><h2 id="方法">方法</h2><h3 id="pcwapcss"><code>pcwapcss</code></h3><ul>
+<li>pcwapcss(<code>array1</code>,<code>array2</code>) 切换pc wap样式</li>
+</ul>
+<hr>
 ]]>
         </content>
     </entry><entry>

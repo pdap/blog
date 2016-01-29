@@ -46,5 +46,9 @@ function pcwapcss(pc,wap){
  pcwapcss(['css/pc.css'],['css/wap.css']);
 
 ````
+## 方法 
+### `pcwapcss`
+  
+  * pcwapcss(`array1`,`array2`) 切换pc wap样式
 
 ----------------
