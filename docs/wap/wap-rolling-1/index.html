@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="nico 0.5.2">
+    <meta name="theme" content="one 0.2">
+    <title>滑动视差滚动zepto</title>
+    <link rel="stylesheet" href="../../static/one.css" />
+    <link rel="stylesheet" href="../../static/pure-min.css" /> 
+    <link rel="stylesheet" href="../../static/responsive-nav.css" />
+    <link rel="stylesheet" href="../../static/styles.css" />
+       <script src="../../static/responsive-nav.min.js"></script>
+  </head>
+  <body>           
+    <div class="header">
+      <div class="container">
+        <div class="brand">
+          <a class="home" href="../../">
+            <img class="logo" src="http://n2.static.pg0.cn/www/common/base/image/statLoading.gif"/>pdoc
+          </a>
+        </div>
+        <div class="nav-collapse" role="navigation">
+          <ul>
+          <li><a href="../../main/">首页</a></li>
+          <li><a href="../../focus/">焦点图</a></li>
+          <li><a href="../../tab/">TAB标签</a></li>
+          <li><a href="../../navigation/">导航</a></li>
+          <li><a href="../../timeline/">时间轴</a></li>
+          <li><a href="../">移动端</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="document yue">
+<div class="hentry" itemscope itemtype="http://schema.org/Article">
+  <h1 class="entry-title" itemprop="name">滑动视差滚动zepto</h1>
+  <div class="entry-description" itemprop="description"><p>wap-rolliing-1 滑动视差滚动 系zepto插件</p></div>
+  <div class="entry-content" itemprop="articleBody"><h2 id="touch-js部分说明">touch.js部分说明</h2><div class="nico-insert-code">
+<script src="./js/zepto.min.js"></script>
+<script src="./js/touch.js"></script></div><div class="highlight"><pre><code class="xml">
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"./js/zepto.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"./js/touch.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="demo">demo</h2><ul>
+<li><a href="./demo.html">示范</a></li>
+</ul>
+<h2 id="结构">结构</h2><pre>&lt;div&gt;
+    &lt;div class=&quot;page page-1-1 page-current&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 pt-page-moveFromTop page-current&quot; src=&quot;./image/cover.png&quot;&gt;
+            &lt;img class=&quot;img_2 pt-page-moveFromLeft page-current&quot; src=&quot;./image/wording_cover.png&quot;&gt;
+            &lt;img class=&quot;img_3 pt-page-moveIconUp page-current&quot; src=&quot;./image/icon_up.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;page page-2-1 hide&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 pt-page-moveFromBottom&quot; src=&quot;./image/wording.png&quot;&gt;
+            &lt;img class=&quot;img_2 pt-page-moveCircle&quot; src=&quot;./image/circle.png&quot;&gt;
+            &lt;img class=&quot;img_3 pt-page-moveFromLeft&quot; src=&quot;./image/people.png&quot;&gt;
+            &lt;img class=&quot;img_4 pt-page-scaleUp&quot; src=&quot;./image/dot1.png&quot;&gt;
+            &lt;img class=&quot;img_5 pt-page-scaleUp&quot; src=&quot;./image/check_develop.png&quot;&gt;
+            &lt;img class=&quot;img_6 pt-page-moveIconUp&quot; src=&quot;./image/icon_up.png&quot;&gt;
+            &lt;img class=&quot;img_7 pt-page-scaleUp&quot; src=&quot;./image/floating_develop.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;page page-2-2 hide&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 pt-page-flipInLeft hide&quot; src=&quot;./image/introduction.png&quot;&gt;
+            &lt;img class=&quot;img_2 pt-page-flipInLeft hide&quot; src=&quot;./image/btn_develop.png&quot;&gt;
+            &lt;img class=&quot;img_3 pt-page-flipInLeft hide&quot; src=&quot;./image/dot2.png&quot;&gt;
+            &lt;img class=&quot;img_6 pt-page-moveIconUp hide&quot; src=&quot;./image/icon_up.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;page page-2-3 hide&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 pt-page-flipInLeft hide&quot; src=&quot;./image/introduction.png&quot;&gt;
+            &lt;img class=&quot;img_2 pt-page-flipInLeft hide&quot; src=&quot;./image/btn_develop.png&quot;&gt;
+            &lt;img class=&quot;img_3 pt-page-flipInLeft hide&quot; src=&quot;./image/dot2.png&quot;&gt;
+            &lt;img class=&quot;img_6 pt-page-moveIconUp hide&quot; src=&quot;./image/icon_up.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;page page-3-1 hide&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 hide pt-page-moveFromBottom&quot; src=&quot;./image/wording_design.png&quot;&gt;
+            &lt;img class=&quot;img_2 hide pt-page-moveCircle&quot; src=&quot;./image/circle-design.png&quot;&gt;
+            &lt;img class=&quot;img_3 pt-page-moveFromBottom hide&quot; src=&quot;./image/people_design.png&quot;&gt;
+            &lt;img class=&quot;img_4 hide pt-page-scaleUp&quot; src=&quot;./image/dot1.png&quot;&gt;
+            &lt;img class=&quot;img_5 hide pt-page-scaleUp&quot; src=&quot;./image/check_design.png&quot;&gt;
+            &lt;img class=&quot;img_6 hide pt-page-moveIconUp&quot; src=&quot;./image/icon_up.png&quot;&gt;
+            &lt;img class=&quot;img_7 hide pt-page-scaleUp&quot; src=&quot;./image/floating_design.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;page page-3-2 hide&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 hide pt-page-flipInLeft&quot; src=&quot;./image/introduction_design.png&quot;&gt;
+            &lt;img class=&quot;img_2 hide pt-page-flipInLeft&quot; src=&quot;./image/btn_design.png&quot;&gt;
+            &lt;img class=&quot;img_3 hide pt-page-flipInLeft&quot; src=&quot;./image/dot2.png&quot;&gt;
+            &lt;img class=&quot;img_6 hide pt-page-moveIconUp&quot; src=&quot;./image/icon_up.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;page page-4-1 hide&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 hide pt-page-moveFromBottom&quot; src=&quot;./image/wording_production.png&quot;&gt;
+            &lt;img class=&quot;img_2 hide pt-page-moveCircle&quot; src=&quot;./image/circle-production.png&quot;&gt;
+            &lt;img class=&quot;img_3 pt-page-moveFromRight&quot; src=&quot;./image/people_production.png&quot;&gt;
+            &lt;img class=&quot;img_4 hide pt-page-scaleUp&quot; src=&quot;./image/dot1.png&quot;&gt;
+            &lt;img class=&quot;img_5 hide pt-page-scaleUp&quot; src=&quot;./image/check_production.png&quot;&gt;
+            &lt;img class=&quot;img_6 hide pt-page-moveIconUp&quot; src=&quot;./image/icon_up.png&quot;&gt;
+            &lt;img class=&quot;img_7 hide pt-page-scaleUp&quot; src=&quot;./image/floating_production.png&quot;&gt;
+            &lt;img class=&quot;img_8 hide pt-page-scaleUp&quot; src=&quot;./image/pic_shadow_production.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;page page-4-2 hide&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 hide pt-page-flipInLeft&quot; src=&quot;./image/introduction_production.png&quot;&gt;
+            &lt;img class=&quot;img_2 hide pt-page-flipInLeft&quot; src=&quot;./image/btn_production.png&quot;&gt;
+            &lt;img class=&quot;img_3 hide pt-page-flipInLeft&quot; src=&quot;./image/dot2.png&quot;&gt;
+            &lt;img class=&quot;img_6 hide pt-page-moveIconUp&quot; src=&quot;./image/icon_up.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;page page-5-1 hide&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 hide pt-page-rotateCubeBottomIn&quot; src=&quot;./image/pic_back.png&quot;&gt;
+            &lt;img class=&quot;img_2 hide pt-page-rotateCubeTopIn&quot; src=&quot;./image/btn_join.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre><hr>
+</div>
+
+  <div class="entry-meta">
+    <time class="updated" datetime="2016-02-02T05:01:00.000Z" itemprop="dateModified">Tuesday, Feb 2nd, 2016</time>
+    in <span class="entry-tags">
+      
+      <a href="../../tag/wap/">wap</a>
+      
+      <a href="../../tag/javascript/">javascript</a>
+      
+    </span>
+  </div>
+</div>
+</div>
+    <div class="footer">
+    </div>
+    <script src="../../static/one.js"></script>
+    <script src="../../static/responsive-nav.min.js"></script>
+    <script>
+        nav = responsiveNav(".nav-collapse");
+    </script>
+  </body>
+</html>

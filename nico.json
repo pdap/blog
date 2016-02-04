@@ -1,9 +1,9 @@
 {
     "source": "content/",
-    "output": "_site",
+    "output": "docs",
     "theme": "_themes/one",
     "sitename": "pdoc",
-    "siteurl": "http://pangzhihao.cn/_site",
+    "siteurl": "http://lab.lepture.com/nico/",
     "permalink": "{{directory}}/{{filename}}.html",
     "writers": [
         "nico.PostWriter",
@@ -13,13 +13,17 @@
         "nico.ArchiveWriter",
         "nico.YearWriter",
         "nico.TagWriter",
-        "nico.DirectoryWriter",
+      
         "nico.FeedWriter"
     ],
-    "logo":"https://s.gravatar.com/avatar/de86b1e4c7a782dd49003e4d0cec92af?size=100&default=retro",
+    "logo":"http://n2.static.pg0.cn/www/common/base/image/statLoading.gif",
     "hideNico":true,
     "navigation": [
-        {"title": "分类一", "link": "life/index.html"},
-        {"title": "分类二", "link": "work/index.html"}
+        {"title": "首页", "link": "main/index.html"},
+        {"title": "焦点图", "link": "focus/index.html"},
+        {"title": "TAB标签", "link": "tab/index.html"},
+        {"title": "导航", "link": "navigation/index.html"},
+        {"title": "时间轴", "link": "timeline/index.html"},
+        {"title": "移动端", "link": "wap/index.html"}
     ] 
 }

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="{{system.name}} {{system.version}}">
     <meta name="theme" content="{{theme.name}} {{theme.version}}">
     <title>{% block title%}{% endblock %}</title>
@@ -13,6 +13,10 @@
     <link rel="alternate" type="application/rss+xml" href="{{config.feedurl}}" title="{{config.sitename}}" />
     {%- endif %}
     <link rel="stylesheet" href="{{static_url('one.css')}}" />
+    <link rel="stylesheet" href="{{static_url('pure-min.css')}}" /> 
+    <link rel="stylesheet" href="{{static_url('responsive-nav.css')}}" />
+    <link rel="stylesheet" href="{{static_url('styles.css')}}" />
+       <script src="{{ static_url('responsive-nav.min.js') }}"></script>
     {%- block afterstyle %}{% endblock %}
     {%- if config.google %}
     <script type="text/javascript">
@@ -28,7 +32,7 @@
     </script>
     {%- endif %}
   </head>
-  <body>
+  <body>           
     <div class="header">
       <div class="container">
         <div class="brand">
@@ -40,10 +44,12 @@
           {%- endif %}
         </div>
         {%- if config.navigation %}
-        <div class="menu" role="navigation">
+        <div class="nav-collapse" role="navigation">
+          <ul>
           {%- for item in config.navigation %}
-          <a href="{{content_url(item.link)}}">{{item.title}}</a>
+          <li><a href="{{content_url(item.link)}}">{{item.title}}</a></li>
           {%- endfor %}
+          </ul>
         </div>
         {%- endif %}
       </div>
@@ -64,5 +70,9 @@
     <div class="github"><a class="github-link" href="{{config.github}}">Fork me on GitHub</a></div>
     {%- endif %}
     <script src="{{ static_url('one.js') }}"></script>
+    <script src="{{ static_url('responsive-nav.min.js') }}"></script>
+    <script>
+        nav = responsiveNav(".nav-collapse");
+    </script>
   </body>
 </html>

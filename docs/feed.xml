@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>pdoc</title>
+    <link href="http://lab.lepture.com/nico/feed.xml" rel="self" />
+    <link href="http://lab.lepture.com/nico/" />
+    <id>http://lab.lepture.com/nico/feed.xml</id>
+    <entry>
+        <title type="html"><![CDATA[触摸视差滚动touchSwipe]]></title>
+        <link href="http://lab.lepture.com/nico/wap/wap-rolling-2/"/>
+        <published>2016-02-02T07:01:00.000Z</published>
+        <updated>2016-02-02T07:01:00.000Z</updated>
+        <id>http://lab.lepture.com/nico/wap/wap-rolling-2/</id>
+        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+            <![CDATA[ <h2 id="参考资料">参考资料</h2><ul>
+<li><a href="https://github.com/mattbryson/TouchSwipe-Jquery-Plugin">github源码</a></li>
+<li><a href="http://labs.rampinteractive.co.uk/touchSwipe/demos/index.html">官网</a></li>
+</ul>
+<h2 id="相关js">相关js</h2><div class="nico-insert-code">
+<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery.touchSwipe.min.js"></script></div><div class="highlight"><pre><code class="xml">
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"./js/jquery-1.11.1.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"./js/jquery.touchSwipe.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="demo">Demo</h2><ul>
+<li><a href="./demo.html">示范</a></li>
+</ul>
+<h2 id="结构">结构</h2><p><code>从不同方向触摸灰色区域</code></p>
+<div class="nico-insert-code"><style type="text/css">
+ #test{width: auto;height: auto;background-color: gray;display: block;min-height: 200px;}
+</style>
+
+<div id="test">触摸灰色区域</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">style</span> <span class="attribute">type</span>=<span class="value">"text/css"</span>&gt;</span><span class="css">
+ <span class="id">#test</span><span class="rules">{<span class="rule"><span class="attribute">width</span>:<span class="value"> auto</span></span>;<span class="rule"><span class="attribute">height</span>:<span class="value"> auto</span></span>;<span class="rule"><span class="attribute">background-color</span>:<span class="value"> gray</span></span>;<span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;<span class="rule"><span class="attribute">min-height</span>:<span class="value"> <span class="number">200</span>px</span></span>;<span class="rule">}</span></span>
+</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"test"</span>&gt;</span>触摸灰色区域<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h2 id="基础用法">基础用法</h2><script>
+$(function() {
+  $("#test").swipe( {
+    //Generic swipe handler for all directions
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+      console.log(event, direction, distance, duration, fingerCount, fingerData);
+      $(this).html("你摸了我！！ <br> " + '方向:'+direction+'<br>距离:'+
+      distance+'<br>持续时间s:'+duration+'<br>手指总数:'+fingerCount+
+      '<br>各个手指的触摸对象:'+JSON.stringify(fingerData));  
+    }
+  });
+
+  //Set some options later
+  $("#test").swipe( {fingers:2} );
+});</script><div class="highlight"><pre><code class="javascript">
+$(<span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  $(<span class="string">"#test"</span>).swipe( {
+    <span class="comment">//Generic swipe handler for all directions</span>
+    swipe:<span class="function"><span class="keyword">function</span><span class="params">(event, direction, distance, duration, fingerCount, fingerData)</span> {</span>
+      console.log(event, direction, distance, duration, fingerCount, fingerData);
+      $(<span class="keyword">this</span>).html(<span class="string">"你摸了我！！ &lt;br&gt; "</span> + <span class="string">'方向:'</span>+direction+<span class="string">'&lt;br&gt;距离:'</span>+
+      distance+<span class="string">'&lt;br&gt;持续时间s:'</span>+duration+<span class="string">'&lt;br&gt;手指总数:'</span>+fingerCount+
+      <span class="string">'&lt;br&gt;各个手指的触摸对象:'</span>+JSON.stringify(fingerData));  
+    }
+  });
+
+  <span class="comment">//Set some options later</span>
+  $(<span class="string">"#test"</span>).swipe( {fingers:<span class="number">2</span>} );
+});</code></pre></div><h2 id="方法">方法</h2><ul>
+<li>swipe() 构造函数</li>
+</ul>
+<h2 id="事件-todo-文档翻译成中文-英文说明">事件 (TODO:文档翻译成中文)<a href="http://labs.rampinteractive.co.uk/touchSwipe/docs/symbols/%24.fn.swipe.html#events">英文说明</a></h2><ul>
+<li>swipe</li>
+<li>swipeDown</li>
+<li>.......</li>
+</ul>
+<hr>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[滑动视差滚动zepto]]></title>
+        <link href="http://lab.lepture.com/nico/wap/wap-rolling-1/"/>
+        <published>2016-02-02T05:01:00.000Z</published>
+        <updated>2016-02-02T05:01:00.000Z</updated>
+        <id>http://lab.lepture.com/nico/wap/wap-rolling-1/</id>
+        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+            <![CDATA[ <h2 id="touch-js部分说明">touch.js部分说明</h2><div class="nico-insert-code">
+<script src="./js/zepto.min.js"></script>
+<script src="./js/touch.js"></script></div><div class="highlight"><pre><code class="xml">
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"./js/zepto.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"./js/touch.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="demo">demo</h2><ul>
+<li><a href="./demo.html">示范</a></li>
+</ul>
+<h2 id="结构">结构</h2><pre>&lt;div&gt;
+    &lt;div class=&quot;page page-1-1 page-current&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 pt-page-moveFromTop page-current&quot; src=&quot;./image/cover.png&quot;&gt;
+            &lt;img class=&quot;img_2 pt-page-moveFromLeft page-current&quot; src=&quot;./image/wording_cover.png&quot;&gt;
+            &lt;img class=&quot;img_3 pt-page-moveIconUp page-current&quot; src=&quot;./image/icon_up.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;page page-2-1 hide&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 pt-page-moveFromBottom&quot; src=&quot;./image/wording.png&quot;&gt;
+            &lt;img class=&quot;img_2 pt-page-moveCircle&quot; src=&quot;./image/circle.png&quot;&gt;
+            &lt;img class=&quot;img_3 pt-page-moveFromLeft&quot; src=&quot;./image/people.png&quot;&gt;
+            &lt;img class=&quot;img_4 pt-page-scaleUp&quot; src=&quot;./image/dot1.png&quot;&gt;
+            &lt;img class=&quot;img_5 pt-page-scaleUp&quot; src=&quot;./image/check_develop.png&quot;&gt;
+            &lt;img class=&quot;img_6 pt-page-moveIconUp&quot; src=&quot;./image/icon_up.png&quot;&gt;
+            &lt;img class=&quot;img_7 pt-page-scaleUp&quot; src=&quot;./image/floating_develop.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;page page-2-2 hide&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 pt-page-flipInLeft hide&quot; src=&quot;./image/introduction.png&quot;&gt;
+            &lt;img class=&quot;img_2 pt-page-flipInLeft hide&quot; src=&quot;./image/btn_develop.png&quot;&gt;
+            &lt;img class=&quot;img_3 pt-page-flipInLeft hide&quot; src=&quot;./image/dot2.png&quot;&gt;
+            &lt;img class=&quot;img_6 pt-page-moveIconUp hide&quot; src=&quot;./image/icon_up.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;page page-2-3 hide&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 pt-page-flipInLeft hide&quot; src=&quot;./image/introduction.png&quot;&gt;
+            &lt;img class=&quot;img_2 pt-page-flipInLeft hide&quot; src=&quot;./image/btn_develop.png&quot;&gt;
+            &lt;img class=&quot;img_3 pt-page-flipInLeft hide&quot; src=&quot;./image/dot2.png&quot;&gt;
+            &lt;img class=&quot;img_6 pt-page-moveIconUp hide&quot; src=&quot;./image/icon_up.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;page page-3-1 hide&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 hide pt-page-moveFromBottom&quot; src=&quot;./image/wording_design.png&quot;&gt;
+            &lt;img class=&quot;img_2 hide pt-page-moveCircle&quot; src=&quot;./image/circle-design.png&quot;&gt;
+            &lt;img class=&quot;img_3 pt-page-moveFromBottom hide&quot; src=&quot;./image/people_design.png&quot;&gt;
+            &lt;img class=&quot;img_4 hide pt-page-scaleUp&quot; src=&quot;./image/dot1.png&quot;&gt;
+            &lt;img class=&quot;img_5 hide pt-page-scaleUp&quot; src=&quot;./image/check_design.png&quot;&gt;
+            &lt;img class=&quot;img_6 hide pt-page-moveIconUp&quot; src=&quot;./image/icon_up.png&quot;&gt;
+            &lt;img class=&quot;img_7 hide pt-page-scaleUp&quot; src=&quot;./image/floating_design.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;page page-3-2 hide&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 hide pt-page-flipInLeft&quot; src=&quot;./image/introduction_design.png&quot;&gt;
+            &lt;img class=&quot;img_2 hide pt-page-flipInLeft&quot; src=&quot;./image/btn_design.png&quot;&gt;
+            &lt;img class=&quot;img_3 hide pt-page-flipInLeft&quot; src=&quot;./image/dot2.png&quot;&gt;
+            &lt;img class=&quot;img_6 hide pt-page-moveIconUp&quot; src=&quot;./image/icon_up.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;page page-4-1 hide&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 hide pt-page-moveFromBottom&quot; src=&quot;./image/wording_production.png&quot;&gt;
+            &lt;img class=&quot;img_2 hide pt-page-moveCircle&quot; src=&quot;./image/circle-production.png&quot;&gt;
+            &lt;img class=&quot;img_3 pt-page-moveFromRight&quot; src=&quot;./image/people_production.png&quot;&gt;
+            &lt;img class=&quot;img_4 hide pt-page-scaleUp&quot; src=&quot;./image/dot1.png&quot;&gt;
+            &lt;img class=&quot;img_5 hide pt-page-scaleUp&quot; src=&quot;./image/check_production.png&quot;&gt;
+            &lt;img class=&quot;img_6 hide pt-page-moveIconUp&quot; src=&quot;./image/icon_up.png&quot;&gt;
+            &lt;img class=&quot;img_7 hide pt-page-scaleUp&quot; src=&quot;./image/floating_production.png&quot;&gt;
+            &lt;img class=&quot;img_8 hide pt-page-scaleUp&quot; src=&quot;./image/pic_shadow_production.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;page page-4-2 hide&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 hide pt-page-flipInLeft&quot; src=&quot;./image/introduction_production.png&quot;&gt;
+            &lt;img class=&quot;img_2 hide pt-page-flipInLeft&quot; src=&quot;./image/btn_production.png&quot;&gt;
+            &lt;img class=&quot;img_3 hide pt-page-flipInLeft&quot; src=&quot;./image/dot2.png&quot;&gt;
+            &lt;img class=&quot;img_6 hide pt-page-moveIconUp&quot; src=&quot;./image/icon_up.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;page page-5-1 hide&quot;&gt;
+        &lt;div class=&quot;wrap&quot;&gt;
+            &lt;img class=&quot;img_1 hide pt-page-rotateCubeBottomIn&quot; src=&quot;./image/pic_back.png&quot;&gt;
+            &lt;img class=&quot;img_2 hide pt-page-rotateCubeTopIn&quot; src=&quot;./image/btn_join.png&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre><hr>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[wap-slider轮播图]]></title>
+        <link href="http://lab.lepture.com/nico/wap/wap-slider/"/>
+        <published>2016-02-02T04:01:00.000Z</published>
+        <updated>2016-02-02T04:01:00.000Z</updated>
+        <id>http://lab.lepture.com/nico/wap/wap-slider/</id>
+        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+            <![CDATA[ <h2 id="引用">引用</h2><div class="nico-insert-code"><script type="text/javascript" src="http://n2.static.pg0.cn/www/common/base/js/jquery-1.9.1.min.js"></script>
+<script src="./js/web_slider.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://n2.static.pg0.cn/www/common/base/js/jquery-1.9.1.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"./js/web_slider.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><style>
+        html{color:#333;background:#fff;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;}
+        body{font:14px/1 "微软雅黑",arial,helvetica,sans-serif;height:100%; color: #333;background-color: #fff;}
+        *{margin:0;padding:0;-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-user-select: none;text-decoration: none;}
+        img{border:0}
+        a{text-decoration:none; color: #333;}
+        a:link,a:visited,a:hover,a:active{ color: #333; text-decoration: none;}
+        i{font-style:normal;font-weight:normal}
+        ul{list-style:none}
+        :focus{outline:0}
+        input[type='search'],button{border:0;-webkit-appearance:none;background-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0; -webkit-user-select: text;}
+        ::-webkit-search-decoration,::-webkit-search-cancel-button,::-webkit-search-results-button,::-webkit-search-results-decoration{display:none}
+        :-moz-placeholder,::-webkit-input-placeholder{color:#9a9696}
+        .wap-slider{ position:relative; width:100%;background:#fff;margin:0; padding:0; padding-bottom:56%; overflow: hidden;}
+        .wap-slider .slider{overflow: hidden;visibility: hidden;position:absolute; height: 100%; width:100%;}
+        .wap-slider .slider-wrap{overflow:hidden;position:relative; height: 100%;}
+        .wap-slider .slider-wrap > div {float: left;width: 100%;position:relative; height: 100%;}
+        .slider-wrap img { display: block; width:100%;height: 100%; position: absolute; top: 0; left: 0;}
+        .slider-wrap span{ display: block; width: 77.8%; position: absolute; bottom: 0; left:0; height: 25px; line-height: 25px; color: #fff; overflow: hidden;text-overflow: ellipsis;white-space: nowrap; padding-left:2.2%; padding-right: 20%; font-size: 12px; background-color: rgba(0,0,0,.5);}
+        .slider-ico{ position:absolute; bottom:9px; right:0; padding-right:8px; margin:0; text-align:right;}
+        .slider-ico li{width:6px;height:6px;margin:0 2px;display:inline-block;-webkit-border-radius:3px;border-radius:3px;background-color:#AFAFAF; float: left; margin-top: 10px;}
+        .slider-ico li.cur{background-color:#e30228;}
+    </style>
+<div class="wap-slider" id="wapSlider">
+        <div class="slider" id="slider">
+            <div class="slider-wrap">
+                <div>
+                    <a href="javascript:;">
+                        <img src="./image/wap/slider_temp1.jpg"/>
+                        <span>1《万物生长》范冰冰韩庚生猛“吃你”</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="javascript:;">
+                        <img src="./image/wap/slider_temp2.jpg"/>
+                        <span>2绿箭侠</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="javascript:;">
+                        <img src="./image/wap/slider_temp1.jpg"/>
+                        <span>3《万物生长》范冰冰韩庚生猛“吃你”</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="javascript:;">
+                        <img src="./image/wap/slider_temp2.jpg"/>
+                        <span>4绿箭侠绿箭侠绿箭侠</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <ul class="slider-ico" id="slider-ico">
+            <li class="cur"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
+        <span class="tag">html</span><span class="rules">{<span class="rule"><span class="attribute">color</span>:<span class="value"><span class="hexcolor">#333</span></span></span>;<span class="rule"><span class="attribute">background</span>:<span class="value"><span class="hexcolor">#fff</span></span></span>;<span class="rule"><span class="attribute">-webkit-text-size-adjust</span>:<span class="value">none</span></span>;<span class="rule"><span class="attribute">-ms-text-size-adjust</span>:<span class="value">none</span></span>;<span class="rule">}</span></span>
+        <span class="tag">body</span><span class="rules">{<span class="rule"><span class="attribute">font</span>:<span class="value"><span class="number">14</span>px/<span class="number">1</span> <span class="string">"微软雅黑"</span>,arial,helvetica,sans-serif</span></span>;<span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">100</span>%</span></span>; <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#333</span></span></span>;<span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;<span class="rule">}</span></span>
+        *<span class="rules">{<span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span></span></span>;<span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">0</span></span></span>;<span class="rule"><span class="attribute">-webkit-tap-highlight-color</span>:<span class="value"> <span class="function">rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>)</span></span></span>;<span class="rule"><span class="attribute">-webkit-user-select</span>:<span class="value"> none</span></span>;<span class="rule"><span class="attribute">text-decoration</span>:<span class="value"> none</span></span>;<span class="rule">}</span></span>
+        <span class="tag">img</span><span class="rules">{<span class="rule"><span class="attribute">border</span>:<span class="value"><span class="number">0</span></span></span></span>}
+        <span class="tag">a</span><span class="rules">{<span class="rule"><span class="attribute">text-decoration</span>:<span class="value">none</span></span>; <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#333</span></span></span>;<span class="rule">}</span></span>
+        <span class="tag">a</span><span class="pseudo">:link</span>,<span class="tag">a</span><span class="pseudo">:visited</span>,<span class="tag">a</span><span class="pseudo">:hover</span>,<span class="tag">a</span><span class="pseudo">:active</span><span class="rules">{ <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#333</span></span></span>; <span class="rule"><span class="attribute">text-decoration</span>:<span class="value"> none</span></span>;<span class="rule">}</span></span>
+        <span class="tag">i</span><span class="rules">{<span class="rule"><span class="attribute">font-style</span>:<span class="value">normal</span></span>;<span class="rule"><span class="attribute">font-weight</span>:<span class="value">normal</span></span></span>}
+        <span class="tag">ul</span><span class="rules">{<span class="rule"><span class="attribute">list-style</span>:<span class="value">none</span></span></span>}
+        <span class="pseudo">:focus</span><span class="rules">{<span class="rule"><span class="attribute">outline</span>:<span class="value"><span class="number">0</span></span></span></span>}
+        <span class="tag">input</span><span class="attr_selector">[type='search']</span>,<span class="tag">button</span><span class="rules">{<span class="rule"><span class="attribute">border</span>:<span class="value"><span class="number">0</span></span></span>;<span class="rule"><span class="attribute">-webkit-appearance</span>:<span class="value">none</span></span>;<span class="rule"><span class="attribute">background-color</span>:<span class="value">transparent</span></span>;<span class="rule"><span class="attribute">-webkit-border-radius</span>:<span class="value"><span class="number">0</span></span></span>;<span class="rule"><span class="attribute">-moz-border-radius</span>:<span class="value"><span class="number">0</span></span></span>;<span class="rule"><span class="attribute">border-radius</span>:<span class="value"><span class="number">0</span></span></span>; <span class="rule"><span class="attribute">-webkit-user-select</span>:<span class="value"> text</span></span>;<span class="rule">}</span></span>
+        <span class="pseudo">::-webkit-search-decoration</span>,<span class="pseudo">::-webkit-search-cancel-button</span>,<span class="pseudo">::-webkit-search-results-button</span>,<span class="pseudo">::-webkit-search-results-decoration</span><span class="rules">{<span class="rule"><span class="attribute">display</span>:<span class="value">none</span></span></span>}
+        <span class="pseudo">:-moz-placeholder</span>,<span class="pseudo">::-webkit-input-placeholder</span><span class="rules">{<span class="rule"><span class="attribute">color</span>:<span class="value"><span class="hexcolor">#9a9696</span></span></span></span>}
+        <span class="class">.wap-slider</span><span class="rules">{ <span class="rule"><span class="attribute">position</span>:<span class="value">relative</span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">100</span>%</span></span>;<span class="rule"><span class="attribute">background</span>:<span class="value"><span class="hexcolor">#fff</span></span></span>;<span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span></span></span>; <span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">0</span></span></span>; <span class="rule"><span class="attribute">padding-bottom</span>:<span class="value"><span class="number">56</span>%</span></span>; <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;<span class="rule">}</span></span>
+        <span class="class">.wap-slider</span> <span class="class">.slider</span><span class="rules">{<span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;<span class="rule"><span class="attribute">visibility</span>:<span class="value"> hidden</span></span>;<span class="rule"><span class="attribute">position</span>:<span class="value">absolute</span></span>; <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100</span>%</span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">100</span>%</span></span>;<span class="rule">}</span></span>
+        <span class="class">.wap-slider</span> <span class="class">.slider-wrap</span><span class="rules">{<span class="rule"><span class="attribute">overflow</span>:<span class="value">hidden</span></span>;<span class="rule"><span class="attribute">position</span>:<span class="value">relative</span></span>; <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100</span>%</span></span>;<span class="rule">}</span></span>
+        <span class="class">.wap-slider</span> <span class="class">.slider-wrap</span> &gt; <span class="tag">div</span> <span class="rules">{<span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100</span>%</span></span>;<span class="rule"><span class="attribute">position</span>:<span class="value">relative</span></span>; <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100</span>%</span></span>;<span class="rule">}</span></span>
+        <span class="class">.slider-wrap</span> <span class="tag">img</span> <span class="rules">{ <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">100</span>%</span></span>;<span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100</span>%</span></span>; <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>; <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">0</span></span></span>; <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">0</span></span></span>;<span class="rule">}</span></span>
+        <span class="class">.slider-wrap</span> <span class="tag">span</span><span class="rules">{ <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">77.8</span>%</span></span>; <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>; <span class="rule"><span class="attribute">bottom</span>:<span class="value"> <span class="number">0</span></span></span>; <span class="rule"><span class="attribute">left</span>:<span class="value"><span class="number">0</span></span></span>; <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">25</span>px</span></span>; <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">25</span>px</span></span>; <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>; <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;<span class="rule"><span class="attribute">text-overflow</span>:<span class="value"> ellipsis</span></span>;<span class="rule"><span class="attribute">white-space</span>:<span class="value"> nowrap</span></span>; <span class="rule"><span class="attribute">padding-left</span>:<span class="value"><span class="number">2.2</span>%</span></span>; <span class="rule"><span class="attribute">padding-right</span>:<span class="value"> <span class="number">20</span>%</span></span>; <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">12</span>px</span></span>; <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="function">rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">5</span>)</span></span></span>;<span class="rule">}</span></span>
+        <span class="class">.slider-ico</span><span class="rules">{ <span class="rule"><span class="attribute">position</span>:<span class="value">absolute</span></span>; <span class="rule"><span class="attribute">bottom</span>:<span class="value"><span class="number">9</span>px</span></span>; <span class="rule"><span class="attribute">right</span>:<span class="value"><span class="number">0</span></span></span>; <span class="rule"><span class="attribute">padding-right</span>:<span class="value"><span class="number">8</span>px</span></span>; <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span></span></span>; <span class="rule"><span class="attribute">text-align</span>:<span class="value">right</span></span>;<span class="rule">}</span></span>
+        <span class="class">.slider-ico</span> <span class="tag">li</span><span class="rules">{<span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">6</span>px</span></span>;<span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">6</span>px</span></span>;<span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span> <span class="number">2</span>px</span></span>;<span class="rule"><span class="attribute">display</span>:<span class="value">inline-block</span></span>;<span class="rule"><span class="attribute">-webkit-border-radius</span>:<span class="value"><span class="number">3</span>px</span></span>;<span class="rule"><span class="attribute">border-radius</span>:<span class="value"><span class="number">3</span>px</span></span>;<span class="rule"><span class="attribute">background-color</span>:<span class="value"><span class="hexcolor">#AFAFAF</span></span></span>; <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>; <span class="rule"><span class="attribute">margin-top</span>:<span class="value"> <span class="number">10</span>px</span></span>;<span class="rule">}</span></span>
+        <span class="class">.slider-ico</span> <span class="tag">li</span><span class="class">.cur</span><span class="rules">{<span class="rule"><span class="attribute">background-color</span>:<span class="value"><span class="hexcolor">#e30228</span></span></span>;<span class="rule">}</span></span>
+    </span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"wap-slider"</span> <span class="attribute">id</span>=<span class="value">"wapSlider"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"slider"</span> <span class="attribute">id</span>=<span class="value">"slider"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"slider-wrap"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">div</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"./image/wap/slider_temp1.jpg"</span>/&gt;</span>
+                        <span class="tag">&lt;<span class="title">span</span>&gt;</span>1《万物生长》范冰冰韩庚生猛“吃你”<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">div</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"./image/wap/slider_temp2.jpg"</span>/&gt;</span>
+                        <span class="tag">&lt;<span class="title">span</span>&gt;</span>2绿箭侠<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">div</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"./image/wap/slider_temp1.jpg"</span>/&gt;</span>
+                        <span class="tag">&lt;<span class="title">span</span>&gt;</span>3《万物生长》范冰冰韩庚生猛“吃你”<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">div</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"./image/wap/slider_temp2.jpg"</span>/&gt;</span>
+                        <span class="tag">&lt;<span class="title">span</span>&gt;</span>4绿箭侠绿箭侠绿箭侠<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"slider-ico"</span> <span class="attribute">id</span>=<span class="value">"slider-ico"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"cur"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h1 id="js">js</h1><script>
+if(document.getElementById('slider-ico')){
+            var bullets = document.getElementById('slider-ico').getElementsByTagName('li');
+            var banner = Swipe(document.getElementById('slider'), {
+                auto: 6000,
+                continuous: true,
+                disableScroll:false,
+                startSlide: 0,
+                callback: function(pos) {
+                    if(document.getElementById('slider-ico').getElementsByTagName('li').length == 2){
+                        pos = pos%2;
+                    }
+                    var i = bullets.length;
+                    while (i--) {
+                        bullets[i].className = ' ';
+                    }
+                    bullets[pos].className = 'cur';
+               }
+           })
+        }</script><div class="highlight"><pre><code class="javascript">
+<span class="keyword">if</span>(document.getElementById(<span class="string">'slider-ico'</span>)){
+            <span class="keyword">var</span> bullets = document.getElementById(<span class="string">'slider-ico'</span>).getElementsByTagName(<span class="string">'li'</span>);
+            <span class="keyword">var</span> banner = Swipe(document.getElementById(<span class="string">'slider'</span>), {
+                auto: <span class="number">6000</span>,
+                continuous: <span class="literal">true</span>,
+                disableScroll:<span class="literal">false</span>,
+                startSlide: <span class="number">0</span>,
+                callback: <span class="function"><span class="keyword">function</span><span class="params">(pos)</span> {</span>
+                    <span class="keyword">if</span>(document.getElementById(<span class="string">'slider-ico'</span>).getElementsByTagName(<span class="string">'li'</span>).length == <span class="number">2</span>){
+                        pos = pos%<span class="number">2</span>;
+                    }
+                    <span class="keyword">var</span> i = bullets.length;
+                    <span class="keyword">while</span> (i--) {
+                        bullets[i].className = <span class="string">' '</span>;
+                    }
+                    bullets[pos].className = <span class="string">'cur'</span>;
+               }
+           })
+        }</code></pre></div><hr>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[layer]]></title>
+        <link href="http://lab.lepture.com/nico/navigation/readme.html"/>
+        <published>2016-01-22T04:01:00.000Z</published>
+        <updated>2016-01-22T04:01:00.000Z</updated>
+        <id>http://lab.lepture.com/nico/navigation/readme.html</id>
+        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+            <![CDATA[ <h2 id="引用">引用</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><button id='normal'>定位pop</button>点击空白处关闭
+<div id='content' style="display: none">
+  <table cellspacing="0" cellpadding="0" class="tablePopB tableItemC">
+    <tbody><tr>
+      <th>原密码：</th>
+      <td><input type="password" id="oldPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>新密码：</th>
+      <td><input type="password" id="newPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>确认新密码：</th>
+      <td><input type="password" id="confirmNewPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="tableBot"><input type="submit" class="bthBlueOper mgL10" value="修改">
+        <input type="reset" class="bthBlueOper mgL10" value="重置">
+        <span>新密码不能是123456</span></td>
+    </tr>
+  </tbody></table>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">id</span>=<span class="value">'normal'</span>&gt;</span>定位pop<span class="tag">&lt;/<span class="title">button</span>&gt;</span>点击空白处关闭
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">style</span>=<span class="value">"display: none"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">table</span> <span class="attribute">cellspacing</span>=<span class="value">"0"</span> <span class="attribute">cellpadding</span>=<span class="value">"0"</span> <span class="attribute">class</span>=<span class="value">"tablePopB tableItemC"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tbody</span>&gt;</span><span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>原密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"oldPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"newPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>确认新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"confirmNewPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span> <span class="attribute">colspan</span>=<span class="value">"2"</span> <span class="attribute">class</span>=<span class="value">"tableBot"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"修改"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"reset"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"重置"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span>&gt;</span>新密码不能是123456<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span><span class="tag">&lt;/<span class="title">table</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><hr>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[layer]]></title>
+        <link href="http://lab.lepture.com/nico/pop/readme.html"/>
+        <published>2016-01-22T04:01:00.000Z</published>
+        <updated>2016-01-22T04:01:00.000Z</updated>
+        <id>http://lab.lepture.com/nico/pop/readme.html</id>
+        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+            <![CDATA[ <h2 id="引用">引用</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><button id='normal'>定位pop</button>点击空白处关闭
+<div id='content' style="display: none">
+  <table cellspacing="0" cellpadding="0" class="tablePopB tableItemC">
+    <tbody><tr>
+      <th>原密码：</th>
+      <td><input type="password" id="oldPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>新密码：</th>
+      <td><input type="password" id="newPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>确认新密码：</th>
+      <td><input type="password" id="confirmNewPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="tableBot"><input type="submit" class="bthBlueOper mgL10" value="修改">
+        <input type="reset" class="bthBlueOper mgL10" value="重置">
+        <span>新密码不能是123456</span></td>
+    </tr>
+  </tbody></table>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">id</span>=<span class="value">'normal'</span>&gt;</span>定位pop<span class="tag">&lt;/<span class="title">button</span>&gt;</span>点击空白处关闭
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">style</span>=<span class="value">"display: none"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">table</span> <span class="attribute">cellspacing</span>=<span class="value">"0"</span> <span class="attribute">cellpadding</span>=<span class="value">"0"</span> <span class="attribute">class</span>=<span class="value">"tablePopB tableItemC"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tbody</span>&gt;</span><span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>原密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"oldPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"newPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>确认新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"confirmNewPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span> <span class="attribute">colspan</span>=<span class="value">"2"</span> <span class="attribute">class</span>=<span class="value">"tableBot"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"修改"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"reset"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"重置"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span>&gt;</span>新密码不能是123456<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span><span class="tag">&lt;/<span class="title">table</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><hr>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[life]]></title>
+        <link href="http://lab.lepture.com/nico/tab/life.html"/>
+        <published>2016-01-22T04:01:00.000Z</published>
+        <updated>2016-01-22T04:01:00.000Z</updated>
+        <id>http://lab.lepture.com/nico/tab/life.html</id>
+        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+            <![CDATA[ <h2 id="引用">引用</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><button id='normal'>定位pop</button>点击空白处关闭
+<div id='content' style="display: none">
+  <table cellspacing="0" cellpadding="0" class="tablePopB tableItemC">
+    <tbody><tr>
+      <th>原密码：</th>
+      <td><input type="password" id="oldPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>新密码：</th>
+      <td><input type="password" id="newPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>确认新密码：</th>
+      <td><input type="password" id="confirmNewPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="tableBot"><input type="submit" class="bthBlueOper mgL10" value="修改">
+        <input type="reset" class="bthBlueOper mgL10" value="重置">
+        <span>新密码不能是123456</span></td>
+    </tr>
+  </tbody></table>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">id</span>=<span class="value">'normal'</span>&gt;</span>定位pop<span class="tag">&lt;/<span class="title">button</span>&gt;</span>点击空白处关闭
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">style</span>=<span class="value">"display: none"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">table</span> <span class="attribute">cellspacing</span>=<span class="value">"0"</span> <span class="attribute">cellpadding</span>=<span class="value">"0"</span> <span class="attribute">class</span>=<span class="value">"tablePopB tableItemC"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tbody</span>&gt;</span><span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>原密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"oldPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"newPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>确认新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"confirmNewPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span> <span class="attribute">colspan</span>=<span class="value">"2"</span> <span class="attribute">class</span>=<span class="value">"tableBot"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"修改"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"reset"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"重置"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span>&gt;</span>新密码不能是123456<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span><span class="tag">&lt;/<span class="title">table</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><hr>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[wap组件介绍]]></title>
+        <link href="http://lab.lepture.com/nico/focus/"/>
+        <published>2016-01-22T04:01:00.000Z</published>
+        <updated>2016-01-22T04:01:00.000Z</updated>
+        <id>http://lab.lepture.com/nico/focus/</id>
+        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+            <![CDATA[ <h2 id="目录">目录</h2><ul>
+<li><a href="./focus-css3/">wap样式相关内容</a></li>
+<li><a href="./focus-css3/"><img src="./focus-css3/logo.png" alt="image"></a></li>
+</ul>
+<hr>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[wap组件介绍]]></title>
+        <link href="http://lab.lepture.com/nico/wap/"/>
+        <published>2016-01-22T04:01:00.000Z</published>
+        <updated>2016-01-22T04:01:00.000Z</updated>
+        <id>http://lab.lepture.com/nico/wap/</id>
+        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+            <![CDATA[ <h2 id="目录">目录</h2><ul>
+<li><a href="./wap-class/">wap样式相关内容</a></li>
+<li><a href="./wap-class/"><img src="./wap-class/logo.png" alt="image"></a></li>
+<li><a href="./wap-slider/">wap-slider轮播</a></li>
+<li><a href="./wap-rolling-1">wap-触摸-touch-zepto</a></li>
+<li><a href="./wap-rolling-2/">wap-触摸-touchSwipe</a></li>
+</ul>
+<hr>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[wap-pc样式切换]]></title>
+        <link href="http://lab.lepture.com/nico/wap/wap-class/"/>
+        <published>2016-01-22T04:01:00.000Z</published>
+        <updated>2016-01-22T04:01:00.000Z</updated>
+        <id>http://lab.lepture.com/nico/wap/wap-class/</id>
+        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+            <![CDATA[ <h2 id="结构">结构</h2><div class="nico-insert-code"><div id='content' >
+ 测试div 
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> &gt;</span>
+ 测试div 
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h2 id="js">js</h2><script>function pcwapcss(pc,wap){
+  if (Object.prototype.toString.call(pc) !== '[object Array]'||Object.prototype.toString.call(wap)!== '[object Array]') {
+    return false;
+  }
+     var url = [];
+  if (/Android|webOS|iPhone|iPod|BlackBerry|opera mini|opera mobile/i.test(navigator.userAgent)) {
+    url = wap;
+  } else {
+    url = pc;
+  }
+  for (var i = 0; i < url.length; i++) {
+      var link= document.createElement("link");
+      link.rel='stylesheet';
+      link.type='text/css';
+      link.href=url[i];
+      document.getElementsByTagName('head')[0].appendChild(link);
+
+  }
+}
+  // 样式切换
+ pcwapcss(['css/pc.css'],['css/wap.css']);</script><div class="highlight"><pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">pcwapcss</span><span class="params">(pc,wap)</span>{</span>
+  <span class="keyword">if</span> (Object.prototype.toString.call(pc) !== <span class="string">'[object Array]'</span>||Object.prototype.toString.call(wap)!== <span class="string">'[object Array]'</span>) {
+    <span class="keyword">return</span> <span class="literal">false</span>;
+  }
+     <span class="keyword">var</span> url = [];
+  <span class="keyword">if</span> (<span class="regexp">/Android|webOS|iPhone|iPod|BlackBerry|opera mini|opera mobile/i</span>.test(navigator.userAgent)) {
+    url = wap;
+  } <span class="keyword">else</span> {
+    url = pc;
+  }
+  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; url.length; i++) {
+      <span class="keyword">var</span> link= document.createElement(<span class="string">"link"</span>);
+      link.rel=<span class="string">'stylesheet'</span>;
+      link.type=<span class="string">'text/css'</span>;
+      link.href=url[i];
+      document.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>].appendChild(link);
+
+  }
+}
+  <span class="comment">// 样式切换</span>
+ pcwapcss([<span class="string">'css/pc.css'</span>],[<span class="string">'css/wap.css'</span>]);</code></pre></div><h2 id="方法">方法</h2><h3 id="pcwapcss"><code>pcwapcss</code></h3><ul>
+<li>pcwapcss(<code>array1</code>,<code>array2</code>) 切换pc wap样式</li>
+</ul>
+<hr>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[work]]></title>
+        <link href="http://lab.lepture.com/nico/focus/focus-css3/"/>
+        <published>2016-01-22T04:01:00.000Z</published>
+        <updated>2016-01-22T04:01:00.000Z</updated>
+        <id>http://lab.lepture.com/nico/focus/focus-css3/</id>
+        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+            <![CDATA[ <h2 id="引用">引用</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><button id='normal'>定位pop</button>点击空白处关闭
+<div id='content' style="display: none">
+  <table cellspacing="0" cellpadding="0" class="tablePopB tableItemC">
+    <tbody><tr>
+      <th>原密码：</th>
+      <td><input type="password" id="oldPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>新密码：</th>
+      <td><input type="password" id="newPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>确认新密码：</th>
+      <td><input type="password" id="confirmNewPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="tableBot"><input type="submit" class="bthBlueOper mgL10" value="修改">
+        <input type="reset" class="bthBlueOper mgL10" value="重置">
+        <span>新密码不能是123456</span></td>
+    </tr>
+  </tbody></table>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">id</span>=<span class="value">'normal'</span>&gt;</span>定位pop<span class="tag">&lt;/<span class="title">button</span>&gt;</span>点击空白处关闭
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">style</span>=<span class="value">"display: none"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">table</span> <span class="attribute">cellspacing</span>=<span class="value">"0"</span> <span class="attribute">cellpadding</span>=<span class="value">"0"</span> <span class="attribute">class</span>=<span class="value">"tablePopB tableItemC"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tbody</span>&gt;</span><span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>原密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"oldPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"newPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>确认新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"confirmNewPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span> <span class="attribute">colspan</span>=<span class="value">"2"</span> <span class="attribute">class</span>=<span class="value">"tableBot"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"修改"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"reset"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"重置"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span>&gt;</span>新密码不能是123456<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span><span class="tag">&lt;/<span class="title">table</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><hr>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[life]]></title>
+        <link href="http://lab.lepture.com/nico/main/life.html"/>
+        <published>2016-01-22T04:01:00.000Z</published>
+        <updated>2016-01-22T04:01:00.000Z</updated>
+        <id>http://lab.lepture.com/nico/main/life.html</id>
+        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+            <![CDATA[ <h2 id="引用">引用</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><button id='normal'>定位pop</button>点击空白处关闭
+<div id='content' style="display: none">
+  <table cellspacing="0" cellpadding="0" class="tablePopB tableItemC">
+    <tbody><tr>
+      <th>原密码：</th>
+      <td><input type="password" id="oldPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>新密码：</th>
+      <td><input type="password" id="newPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>确认新密码：</th>
+      <td><input type="password" id="confirmNewPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="tableBot"><input type="submit" class="bthBlueOper mgL10" value="修改">
+        <input type="reset" class="bthBlueOper mgL10" value="重置">
+        <span>新密码不能是123456</span></td>
+    </tr>
+  </tbody></table>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">id</span>=<span class="value">'normal'</span>&gt;</span>定位pop<span class="tag">&lt;/<span class="title">button</span>&gt;</span>点击空白处关闭
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">style</span>=<span class="value">"display: none"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">table</span> <span class="attribute">cellspacing</span>=<span class="value">"0"</span> <span class="attribute">cellpadding</span>=<span class="value">"0"</span> <span class="attribute">class</span>=<span class="value">"tablePopB tableItemC"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tbody</span>&gt;</span><span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>原密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"oldPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"newPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>确认新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"confirmNewPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span> <span class="attribute">colspan</span>=<span class="value">"2"</span> <span class="attribute">class</span>=<span class="value">"tableBot"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"修改"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"reset"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"重置"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span>&gt;</span>新密码不能是123456<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span><span class="tag">&lt;/<span class="title">table</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><hr>
+]]>
+        </content>
+    </entry><entry>
+        <title type="html"><![CDATA[layer]]></title>
+        <link href="http://lab.lepture.com/nico/timeline/timeline.html"/>
+        <published>2016-01-22T04:01:00.000Z</published>
+        <updated>2016-01-22T04:01:00.000Z</updated>
+        <id>http://lab.lepture.com/nico/timeline/timeline.html</id>
+        <content type="html" xml:base="http://lab.lepture.com/nico/" xml:lang="en">
+            <![CDATA[ <h2 id="引用">引用</h2><div class="nico-insert-code"><script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/1.9.1/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><button id='normal'>定位pop</button>点击空白处关闭
+<div id='content' style="display: none">
+  <table cellspacing="0" cellpadding="0" class="tablePopB tableItemC">
+    <tbody><tr>
+      <th>原密码：</th>
+      <td><input type="password" id="oldPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>新密码：</th>
+      <td><input type="password" id="newPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <th>确认新密码：</th>
+      <td><input type="password" id="confirmNewPassword" class="inputTex" name=""></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="tableBot"><input type="submit" class="bthBlueOper mgL10" value="修改">
+        <input type="reset" class="bthBlueOper mgL10" value="重置">
+        <span>新密码不能是123456</span></td>
+    </tr>
+  </tbody></table>
+</div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">id</span>=<span class="value">'normal'</span>&gt;</span>定位pop<span class="tag">&lt;/<span class="title">button</span>&gt;</span>点击空白处关闭
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">style</span>=<span class="value">"display: none"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">table</span> <span class="attribute">cellspacing</span>=<span class="value">"0"</span> <span class="attribute">cellpadding</span>=<span class="value">"0"</span> <span class="attribute">class</span>=<span class="value">"tablePopB tableItemC"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tbody</span>&gt;</span><span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>原密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"oldPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"newPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">th</span>&gt;</span>确认新密码：<span class="tag">&lt;/<span class="title">th</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">id</span>=<span class="value">"confirmNewPassword"</span> <span class="attribute">class</span>=<span class="value">"inputTex"</span> <span class="attribute">name</span>=<span class="value">""</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">td</span> <span class="attribute">colspan</span>=<span class="value">"2"</span> <span class="attribute">class</span>=<span class="value">"tableBot"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"修改"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"reset"</span> <span class="attribute">class</span>=<span class="value">"bthBlueOper mgL10"</span> <span class="attribute">value</span>=<span class="value">"重置"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span>&gt;</span>新密码不能是123456<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span><span class="tag">&lt;/<span class="title">table</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><hr>
+]]>
+        </content>
+    </entry>
+</feed>

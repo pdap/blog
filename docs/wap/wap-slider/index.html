@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="nico 0.5.2">
+    <meta name="theme" content="one 0.2">
+    <title>wap-slider轮播图</title>
+    <link rel="stylesheet" href="../../static/one.css" />
+    <link rel="stylesheet" href="../../static/pure-min.css" /> 
+    <link rel="stylesheet" href="../../static/responsive-nav.css" />
+    <link rel="stylesheet" href="../../static/styles.css" />
+       <script src="../../static/responsive-nav.min.js"></script>
+  </head>
+  <body>           
+    <div class="header">
+      <div class="container">
+        <div class="brand">
+          <a class="home" href="../../">
+            <img class="logo" src="http://n2.static.pg0.cn/www/common/base/image/statLoading.gif"/>pdoc
+          </a>
+        </div>
+        <div class="nav-collapse" role="navigation">
+          <ul>
+          <li><a href="../../main/">首页</a></li>
+          <li><a href="../../focus/">焦点图</a></li>
+          <li><a href="../../tab/">TAB标签</a></li>
+          <li><a href="../../navigation/">导航</a></li>
+          <li><a href="../../timeline/">时间轴</a></li>
+          <li><a href="../">移动端</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="document yue">
+<div class="hentry" itemscope itemtype="http://schema.org/Article">
+  <h1 class="entry-title" itemprop="name">wap-slider轮播图</h1>
+  <div class="entry-description" itemprop="description"><p>wapSlider轮播图介绍</p></div>
+  <div class="entry-content" itemprop="articleBody"><h2 id="引用">引用</h2><div class="nico-insert-code"><script type="text/javascript" src="http://n2.static.pg0.cn/www/common/base/js/jquery-1.9.1.min.js"></script>
+<script src="./js/web_slider.js"></script></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://n2.static.pg0.cn/www/common/base/js/jquery-1.9.1.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"./js/web_slider.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div><h2 id="结构">结构</h2><div class="nico-insert-code"><style>
+        html{color:#333;background:#fff;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;}
+        body{font:14px/1 "微软雅黑",arial,helvetica,sans-serif;height:100%; color: #333;background-color: #fff;}
+        *{margin:0;padding:0;-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-user-select: none;text-decoration: none;}
+        img{border:0}
+        a{text-decoration:none; color: #333;}
+        a:link,a:visited,a:hover,a:active{ color: #333; text-decoration: none;}
+        i{font-style:normal;font-weight:normal}
+        ul{list-style:none}
+        :focus{outline:0}
+        input[type='search'],button{border:0;-webkit-appearance:none;background-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0; -webkit-user-select: text;}
+        ::-webkit-search-decoration,::-webkit-search-cancel-button,::-webkit-search-results-button,::-webkit-search-results-decoration{display:none}
+        :-moz-placeholder,::-webkit-input-placeholder{color:#9a9696}
+        .wap-slider{ position:relative; width:100%;background:#fff;margin:0; padding:0; padding-bottom:56%; overflow: hidden;}
+        .wap-slider .slider{overflow: hidden;visibility: hidden;position:absolute; height: 100%; width:100%;}
+        .wap-slider .slider-wrap{overflow:hidden;position:relative; height: 100%;}
+        .wap-slider .slider-wrap > div {float: left;width: 100%;position:relative; height: 100%;}
+        .slider-wrap img { display: block; width:100%;height: 100%; position: absolute; top: 0; left: 0;}
+        .slider-wrap span{ display: block; width: 77.8%; position: absolute; bottom: 0; left:0; height: 25px; line-height: 25px; color: #fff; overflow: hidden;text-overflow: ellipsis;white-space: nowrap; padding-left:2.2%; padding-right: 20%; font-size: 12px; background-color: rgba(0,0,0,.5);}
+        .slider-ico{ position:absolute; bottom:9px; right:0; padding-right:8px; margin:0; text-align:right;}
+        .slider-ico li{width:6px;height:6px;margin:0 2px;display:inline-block;-webkit-border-radius:3px;border-radius:3px;background-color:#AFAFAF; float: left; margin-top: 10px;}
+        .slider-ico li.cur{background-color:#e30228;}
+    </style>
+<div class="wap-slider" id="wapSlider">
+        <div class="slider" id="slider">
+            <div class="slider-wrap">
+                <div>
+                    <a href="javascript:;">
+                        <img src="./image/wap/slider_temp1.jpg"/>
+                        <span>1《万物生长》范冰冰韩庚生猛“吃你”</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="javascript:;">
+                        <img src="./image/wap/slider_temp2.jpg"/>
+                        <span>2绿箭侠</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="javascript:;">
+                        <img src="./image/wap/slider_temp1.jpg"/>
+                        <span>3《万物生长》范冰冰韩庚生猛“吃你”</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="javascript:;">
+                        <img src="./image/wap/slider_temp2.jpg"/>
+                        <span>4绿箭侠绿箭侠绿箭侠</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <ul class="slider-ico" id="slider-ico">
+            <li class="cur"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
+        <span class="tag">html</span><span class="rules">{<span class="rule"><span class="attribute">color</span>:<span class="value"><span class="hexcolor">#333</span></span></span>;<span class="rule"><span class="attribute">background</span>:<span class="value"><span class="hexcolor">#fff</span></span></span>;<span class="rule"><span class="attribute">-webkit-text-size-adjust</span>:<span class="value">none</span></span>;<span class="rule"><span class="attribute">-ms-text-size-adjust</span>:<span class="value">none</span></span>;<span class="rule">}</span></span>
+        <span class="tag">body</span><span class="rules">{<span class="rule"><span class="attribute">font</span>:<span class="value"><span class="number">14</span>px/<span class="number">1</span> <span class="string">"微软雅黑"</span>,arial,helvetica,sans-serif</span></span>;<span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">100</span>%</span></span>; <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#333</span></span></span>;<span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;<span class="rule">}</span></span>
+        *<span class="rules">{<span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span></span></span>;<span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">0</span></span></span>;<span class="rule"><span class="attribute">-webkit-tap-highlight-color</span>:<span class="value"> <span class="function">rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>)</span></span></span>;<span class="rule"><span class="attribute">-webkit-user-select</span>:<span class="value"> none</span></span>;<span class="rule"><span class="attribute">text-decoration</span>:<span class="value"> none</span></span>;<span class="rule">}</span></span>
+        <span class="tag">img</span><span class="rules">{<span class="rule"><span class="attribute">border</span>:<span class="value"><span class="number">0</span></span></span></span>}
+        <span class="tag">a</span><span class="rules">{<span class="rule"><span class="attribute">text-decoration</span>:<span class="value">none</span></span>; <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#333</span></span></span>;<span class="rule">}</span></span>
+        <span class="tag">a</span><span class="pseudo">:link</span>,<span class="tag">a</span><span class="pseudo">:visited</span>,<span class="tag">a</span><span class="pseudo">:hover</span>,<span class="tag">a</span><span class="pseudo">:active</span><span class="rules">{ <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#333</span></span></span>; <span class="rule"><span class="attribute">text-decoration</span>:<span class="value"> none</span></span>;<span class="rule">}</span></span>
+        <span class="tag">i</span><span class="rules">{<span class="rule"><span class="attribute">font-style</span>:<span class="value">normal</span></span>;<span class="rule"><span class="attribute">font-weight</span>:<span class="value">normal</span></span></span>}
+        <span class="tag">ul</span><span class="rules">{<span class="rule"><span class="attribute">list-style</span>:<span class="value">none</span></span></span>}
+        <span class="pseudo">:focus</span><span class="rules">{<span class="rule"><span class="attribute">outline</span>:<span class="value"><span class="number">0</span></span></span></span>}
+        <span class="tag">input</span><span class="attr_selector">[type='search']</span>,<span class="tag">button</span><span class="rules">{<span class="rule"><span class="attribute">border</span>:<span class="value"><span class="number">0</span></span></span>;<span class="rule"><span class="attribute">-webkit-appearance</span>:<span class="value">none</span></span>;<span class="rule"><span class="attribute">background-color</span>:<span class="value">transparent</span></span>;<span class="rule"><span class="attribute">-webkit-border-radius</span>:<span class="value"><span class="number">0</span></span></span>;<span class="rule"><span class="attribute">-moz-border-radius</span>:<span class="value"><span class="number">0</span></span></span>;<span class="rule"><span class="attribute">border-radius</span>:<span class="value"><span class="number">0</span></span></span>; <span class="rule"><span class="attribute">-webkit-user-select</span>:<span class="value"> text</span></span>;<span class="rule">}</span></span>
+        <span class="pseudo">::-webkit-search-decoration</span>,<span class="pseudo">::-webkit-search-cancel-button</span>,<span class="pseudo">::-webkit-search-results-button</span>,<span class="pseudo">::-webkit-search-results-decoration</span><span class="rules">{<span class="rule"><span class="attribute">display</span>:<span class="value">none</span></span></span>}
+        <span class="pseudo">:-moz-placeholder</span>,<span class="pseudo">::-webkit-input-placeholder</span><span class="rules">{<span class="rule"><span class="attribute">color</span>:<span class="value"><span class="hexcolor">#9a9696</span></span></span></span>}
+        <span class="class">.wap-slider</span><span class="rules">{ <span class="rule"><span class="attribute">position</span>:<span class="value">relative</span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">100</span>%</span></span>;<span class="rule"><span class="attribute">background</span>:<span class="value"><span class="hexcolor">#fff</span></span></span>;<span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span></span></span>; <span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">0</span></span></span>; <span class="rule"><span class="attribute">padding-bottom</span>:<span class="value"><span class="number">56</span>%</span></span>; <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;<span class="rule">}</span></span>
+        <span class="class">.wap-slider</span> <span class="class">.slider</span><span class="rules">{<span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;<span class="rule"><span class="attribute">visibility</span>:<span class="value"> hidden</span></span>;<span class="rule"><span class="attribute">position</span>:<span class="value">absolute</span></span>; <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100</span>%</span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">100</span>%</span></span>;<span class="rule">}</span></span>
+        <span class="class">.wap-slider</span> <span class="class">.slider-wrap</span><span class="rules">{<span class="rule"><span class="attribute">overflow</span>:<span class="value">hidden</span></span>;<span class="rule"><span class="attribute">position</span>:<span class="value">relative</span></span>; <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100</span>%</span></span>;<span class="rule">}</span></span>
+        <span class="class">.wap-slider</span> <span class="class">.slider-wrap</span> &gt; <span class="tag">div</span> <span class="rules">{<span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;<span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100</span>%</span></span>;<span class="rule"><span class="attribute">position</span>:<span class="value">relative</span></span>; <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100</span>%</span></span>;<span class="rule">}</span></span>
+        <span class="class">.slider-wrap</span> <span class="tag">img</span> <span class="rules">{ <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">100</span>%</span></span>;<span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100</span>%</span></span>; <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>; <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">0</span></span></span>; <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">0</span></span></span>;<span class="rule">}</span></span>
+        <span class="class">.slider-wrap</span> <span class="tag">span</span><span class="rules">{ <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">77.8</span>%</span></span>; <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>; <span class="rule"><span class="attribute">bottom</span>:<span class="value"> <span class="number">0</span></span></span>; <span class="rule"><span class="attribute">left</span>:<span class="value"><span class="number">0</span></span></span>; <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">25</span>px</span></span>; <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">25</span>px</span></span>; <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>; <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;<span class="rule"><span class="attribute">text-overflow</span>:<span class="value"> ellipsis</span></span>;<span class="rule"><span class="attribute">white-space</span>:<span class="value"> nowrap</span></span>; <span class="rule"><span class="attribute">padding-left</span>:<span class="value"><span class="number">2.2</span>%</span></span>; <span class="rule"><span class="attribute">padding-right</span>:<span class="value"> <span class="number">20</span>%</span></span>; <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">12</span>px</span></span>; <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="function">rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,.<span class="number">5</span>)</span></span></span>;<span class="rule">}</span></span>
+        <span class="class">.slider-ico</span><span class="rules">{ <span class="rule"><span class="attribute">position</span>:<span class="value">absolute</span></span>; <span class="rule"><span class="attribute">bottom</span>:<span class="value"><span class="number">9</span>px</span></span>; <span class="rule"><span class="attribute">right</span>:<span class="value"><span class="number">0</span></span></span>; <span class="rule"><span class="attribute">padding-right</span>:<span class="value"><span class="number">8</span>px</span></span>; <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span></span></span>; <span class="rule"><span class="attribute">text-align</span>:<span class="value">right</span></span>;<span class="rule">}</span></span>
+        <span class="class">.slider-ico</span> <span class="tag">li</span><span class="rules">{<span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">6</span>px</span></span>;<span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">6</span>px</span></span>;<span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span> <span class="number">2</span>px</span></span>;<span class="rule"><span class="attribute">display</span>:<span class="value">inline-block</span></span>;<span class="rule"><span class="attribute">-webkit-border-radius</span>:<span class="value"><span class="number">3</span>px</span></span>;<span class="rule"><span class="attribute">border-radius</span>:<span class="value"><span class="number">3</span>px</span></span>;<span class="rule"><span class="attribute">background-color</span>:<span class="value"><span class="hexcolor">#AFAFAF</span></span></span>; <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>; <span class="rule"><span class="attribute">margin-top</span>:<span class="value"> <span class="number">10</span>px</span></span>;<span class="rule">}</span></span>
+        <span class="class">.slider-ico</span> <span class="tag">li</span><span class="class">.cur</span><span class="rules">{<span class="rule"><span class="attribute">background-color</span>:<span class="value"><span class="hexcolor">#e30228</span></span></span>;<span class="rule">}</span></span>
+    </span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"wap-slider"</span> <span class="attribute">id</span>=<span class="value">"wapSlider"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"slider"</span> <span class="attribute">id</span>=<span class="value">"slider"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"slider-wrap"</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">div</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"./image/wap/slider_temp1.jpg"</span>/&gt;</span>
+                        <span class="tag">&lt;<span class="title">span</span>&gt;</span>1《万物生长》范冰冰韩庚生猛“吃你”<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">div</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"./image/wap/slider_temp2.jpg"</span>/&gt;</span>
+                        <span class="tag">&lt;<span class="title">span</span>&gt;</span>2绿箭侠<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">div</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"./image/wap/slider_temp1.jpg"</span>/&gt;</span>
+                        <span class="tag">&lt;<span class="title">span</span>&gt;</span>3《万物生长》范冰冰韩庚生猛“吃你”<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">div</span>&gt;</span>
+                    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:;"</span>&gt;</span>
+                        <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"./image/wap/slider_temp2.jpg"</span>/&gt;</span>
+                        <span class="tag">&lt;<span class="title">span</span>&gt;</span>4绿箭侠绿箭侠绿箭侠<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+                    <span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+                <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"slider-ico"</span> <span class="attribute">id</span>=<span class="value">"slider-ico"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"cur"</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre></div><h1 id="js">js</h1><script>
+if(document.getElementById('slider-ico')){
+            var bullets = document.getElementById('slider-ico').getElementsByTagName('li');
+            var banner = Swipe(document.getElementById('slider'), {
+                auto: 6000,
+                continuous: true,
+                disableScroll:false,
+                startSlide: 0,
+                callback: function(pos) {
+                    if(document.getElementById('slider-ico').getElementsByTagName('li').length == 2){
+                        pos = pos%2;
+                    }
+                    var i = bullets.length;
+                    while (i--) {
+                        bullets[i].className = ' ';
+                    }
+                    bullets[pos].className = 'cur';
+               }
+           })
+        }</script><div class="highlight"><pre><code class="javascript">
+<span class="keyword">if</span>(document.getElementById(<span class="string">'slider-ico'</span>)){
+            <span class="keyword">var</span> bullets = document.getElementById(<span class="string">'slider-ico'</span>).getElementsByTagName(<span class="string">'li'</span>);
+            <span class="keyword">var</span> banner = Swipe(document.getElementById(<span class="string">'slider'</span>), {
+                auto: <span class="number">6000</span>,
+                continuous: <span class="literal">true</span>,
+                disableScroll:<span class="literal">false</span>,
+                startSlide: <span class="number">0</span>,
+                callback: <span class="function"><span class="keyword">function</span><span class="params">(pos)</span> {</span>
+                    <span class="keyword">if</span>(document.getElementById(<span class="string">'slider-ico'</span>).getElementsByTagName(<span class="string">'li'</span>).length == <span class="number">2</span>){
+                        pos = pos%<span class="number">2</span>;
+                    }
+                    <span class="keyword">var</span> i = bullets.length;
+                    <span class="keyword">while</span> (i--) {
+                        bullets[i].className = <span class="string">' '</span>;
+                    }
+                    bullets[pos].className = <span class="string">'cur'</span>;
+               }
+           })
+        }</code></pre></div><hr>
+</div>
+
+  <div class="entry-meta">
+    <time class="updated" datetime="2016-02-02T04:01:00.000Z" itemprop="dateModified">Tuesday, Feb 2nd, 2016</time>
+    in <span class="entry-tags">
+      
+      <a href="../../tag/wap/">wap</a>
+      
+      <a href="../../tag/javascript/">javascript</a>
+      
+    </span>
+  </div>
+</div>
+</div>
+    <div class="footer">
+    </div>
+    <script src="../../static/one.js"></script>
+    <script src="../../static/responsive-nav.min.js"></script>
+    <script>
+        nav = responsiveNav(".nav-collapse");
+    </script>
+  </body>
+</html>
